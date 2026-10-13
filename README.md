@@ -1,4 +1,4 @@
- # NxCode IDE — Berkas Unduhan
+# NxCode IDE — Berkas Unduhan
 
 Folder ini berisi paket siap pakai **NxCode IDE** untuk tiap sistem operasi.
 Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
@@ -7,8 +7,64 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 
 | Berkas | Sistem | Ukuran | SHA-256 |
 | --- | --- | --- | --- |
-| `NxCode-IDE-Setup-1.0.0.exe` | Windows 10/11 (64-bit) | ± 54 MB | `BD46E4FE32F868B3975C678ABE9A23BE2903BF67B1BB8292BEFAD9E48CF2A6EA` |
-| `NxCode-IDE-1.0.0-linux-x64.tar.gz` | Linux (x64) | ± 10 MB | `6060538C36560B64F05E2539DE66DD4E16428A8B946316EC93CCE0977C1154A4` |
+| `NxCode-IDE-Setup-1.0.6.exe` | Windows 10/11 (64-bit) | ± 74 MB | `E54947295ACB722E81A6CF3F42D4A0DCCE172446CD3A72753DDAE2BD4A9A7B18` |
+| `NxCode-IDE-1.0.6-linux-x64.tar.gz` | Linux (x64) | ± 14 MB | `45102B592E453EA6207EE596A79AA88122057EF167E87EDAF36025790BDB6356` |
+| `NxCode-IDE-Setup-1.0.5.exe` | Windows 10/11 (64-bit) | ± 57 MB | `D67A53C680A667A1112E1A45CBBB54CDFDCB74D9F1A0F5326071ACBF2E798A6A` |
+| `NxCode-IDE-1.0.5-linux-x64.tar.gz` | Linux (x64) | ± 14 MB | `0194179822E229B0DBD6F658C4D7946A8B0A81C28FF835E46C8D06982A59EF23` |
+| `NxCode-IDE-Setup-1.0.4.exe` | Windows 10/11 (64-bit) | ± 57 MB | `BB2CFFB7D67D7A3B7F746F87B6427B2532309328A6699818B0DC89D5FDC090C6` |
+| `NxCode-IDE-Setup-1.0.3.exe` | Windows 10/11 (64-bit) | ± 54 MB | `B53EF598EE46D81A9896C327DDAB94DF4C544C814F842332F621FC73AC157BB0` |
+| `NxCode-IDE-Setup-1.0.2.exe` | Windows 10/11 (64-bit) | ± 54 MB | `524764F3D48697BA99DC4EAC7CC576509E50C1D8943AFCF8B434C305AE33577C` |
+| `NxCode-IDE-Setup-1.0.0.exe` | Windows 10/11 (64-bit) | ± 54 MB | `8DA7F5CEE66378A96A036DB974E26AB62B2EA7E7ED950506915CC405353B465F` |
+
+### v1.0.6 (Windows & Linux)
+
+- **Perbaikan tampilan font**: bila font editor (Consolas) tidak terpasang,
+  editor kini memakai fallback font monospace sistem — memperbaiki karakter
+  spasi yang tampil dengan garis/artefak akibat substitusi font sembarangan.
+- **UX menulis**: `Backspace` di indentasi spasi menghapus satu unit indent
+  (bukan satu spasi); `Home` pintar (awal indent ↔ kolom 0); kursor lebih tebal (2px).
+- Menulis: `Ctrl+C` tanpa seleksi menyalin baris, `Ctrl+V` baris baru (v1.0.5).
+- **Explorer**: menu **"Open in Terminal"** dipindah ke baris ke-2 (setelah
+  "New File") karena sering dipakai.
+
+### v1.0.5 (Windows & Linux)
+
+- **Terminal bebas dari shortcut aplikasi**: saat fokus di dalam panel terminal
+  (kanan/bawah), shortcut aplikasi tidak lagi mencuri tombol. AI coding agent
+  (claude/opencode/vim, dsb.) kini menerima `Ctrl+S`, `Ctrl+W`, `Ctrl+N`,
+  `Ctrl+B`, `Ctrl+P`, `Alt+←/→`, dan lainnya secara utuh. Yang tetap aktif dari
+  dalam terminal hanya `Ctrl+`` (toggle panel) dan `Ctrl+Shift+P` (command palette).
+- **UX editor**: `Tab` mengikuti preferensi indentasi (spasi/tab) + `Shift+Tab`
+  outdent; `Alt+↑/↓` pindah baris; `Shift+Alt+↓` duplikat baris;
+  `Alt+Z` toggle word wrap; `Shift+Alt+A` toggle komentar blok.
+- **Clipboard**: `Ctrl+C` tanpa seleksi menyalin seluruh baris kursor;
+  `Ctrl+V` menempel sebagai baris baru di bawah baris kursor.
+
+### v1.0.4 (Windows)
+
+- **PDF Viewer**: membuka berkas `.pdf` kini menampilkan halaman PDF LANGSUNG di
+  dalam editor (bukan teks biner). Navigasi halaman (prev/next), zoom
+  (Ctrl+wheel / menu View), fit/actual size, info bar "hal N/total · zoom · ukuran",
+  dan muat-ulang otomatis saat berkas berubah. Render memakai **PDFium**
+  (mesin PDF Chromium, BSD) yang ikut di dalam paket.
+- **Perbaikan**: ekspor Markdown -> PDF (v1.0.3) sempat mencetak teks
+  **mikroskopis** karena ukuran halaman dokumen meleset. Sudah diperbaiki.
+
+### v1.0.3 (Windows)
+
+- **Ekspor Markdown -> PDF**: bar markdown kini `[Markdown | Preview | HTML | PDF]`.
+  Tab **PDF** mengekspor dokumen `.md` ke `.pdf` (sibling, A4, margin 15 mm),
+  memakai `QPdfWriter` bawaan Qt — tanpa dependency eksternal.
+
+### v1.0.2 (Windows)
+
+- **New File** kini otomatis mendaftar **400+ bahasa** dari grammar KSyntaxHighlighting,
+  dikelompokkan per kategori (Sources, Markup, Scripts, dst.), dengan 22 bahasa
+  umum (HTML, JS, CSS, JSON, Markdown, PHP, C/C++, Python, dll.) tampil di atas
+  menu untuk akses cepat.
+- Penyuntingan: auto-indent, auto-tutup kurung/kutip/tag, multi-kursor (Ctrl+D),
+  go-to-bracket (Ctrl+M), deteksi indentasi, snippet bawaan, dan Find-in-Selection
+  dengan Preserve Case.
 
 > macOS belum tersedia — SDK NXC belum menyediakan aset untuk platform itu.
 
@@ -16,7 +72,7 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 
 ### Windows
 
-1. Unduh `NxCode-IDE-Setup-1.0.0.exe`.
+1. Unduh `NxCode-IDE-Setup-1.0.6.exe`.
 2. Jalankan. Karena belum ditandatangani, Windows SmartScreen mungkin muncul —
    pilih **More info** lalu **Run anyway**.
 3. Ikuti wizard: folder instal, shortcut Start Menu / Desktop, lalu selesai.
@@ -53,12 +109,12 @@ dari sistem. Untuk mesin tanpa Qt, perlu bundel Qt (AppImage/linuxdeployqt).
 
 ```powershell
 # Windows
-Get-FileHash .\NxCode-IDE-Setup-1.0.0.exe -Algorithm SHA256
+Get-FileHash .\NxCode-IDE-Setup-1.0.6.exe -Algorithm SHA256
 ```
 
 ```bash
 # Linux
-sha256sum NxCode-IDE-1.0.0-linux-x64.tar.gz
+sha256sum NxCode-IDE-1.0.6-linux-x64.tar.gz
 ```
 
 Bandingkan hasilnya dengan tabel di atas.
