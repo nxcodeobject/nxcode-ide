@@ -1,4 +1,4 @@
-# NxCode IDE — Berkas Unduhan
+ # NxCode IDE — Berkas Unduhan
 
 Folder ini berisi paket siap pakai **NxCode IDE** untuk tiap sistem operasi.
 Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
@@ -7,6 +7,7 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 
 | Berkas | Sistem | Ukuran | SHA-256 |
 | --- | --- | --- | --- |
+| `NxCode-IDE-Setup-1.0.7.exe` | Windows 10/11 (64-bit) | ± 74 MB | `05C534F960965D495DB86FAF67FBD7EB6C7E8125C622A229A2B8ADADB0DD2FA0` |
 | `NxCode-IDE-Setup-1.0.6.exe` | Windows 10/11 (64-bit) | ± 74 MB | `E54947295ACB722E81A6CF3F42D4A0DCCE172446CD3A72753DDAE2BD4A9A7B18` |
 | `NxCode-IDE-1.0.6-linux-x64.tar.gz` | Linux (x64) | ± 14 MB | `45102B592E453EA6207EE596A79AA88122057EF167E87EDAF36025790BDB6356` |
 | `NxCode-IDE-Setup-1.0.5.exe` | Windows 10/11 (64-bit) | ± 57 MB | `D67A53C680A667A1112E1A45CBBB54CDFDCB74D9F1A0F5326071ACBF2E798A6A` |
@@ -15,6 +16,17 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 | `NxCode-IDE-Setup-1.0.3.exe` | Windows 10/11 (64-bit) | ± 54 MB | `B53EF598EE46D81A9896C327DDAB94DF4C544C814F842332F621FC73AC157BB0` |
 | `NxCode-IDE-Setup-1.0.2.exe` | Windows 10/11 (64-bit) | ± 54 MB | `524764F3D48697BA99DC4EAC7CC576509E50C1D8943AFCF8B434C305AE33577C` |
 | `NxCode-IDE-Setup-1.0.0.exe` | Windows 10/11 (64-bit) | ± 54 MB | `8DA7F5CEE66378A96A036DB974E26AB62B2EA7E7ED950506915CC405353B465F` |
+
+### v1.0.7 (Windows)
+
+- **Jendela baru**: tarik tab file, gambar, atau PDF keluar dari jendela membuka
+  jendela baru di dekat kursor (gaya Sublime). Jatuhkan tab ke jendela yang
+  sudah ada untuk memindahkannya. Tab panel (Source Control, API, Settings)
+  tetap di jendelanya.
+- **Paste**: `Ctrl+V` menempel di posisi kursor, bukan sebagai baris baru.
+  `Ctrl+Z` mengembalikan kursor ke tempat edit, tidak meloncat ke baris 1.
+- **Explorer**: seret file atau folder dari pohon ke terminal kembali menulis
+  `@path` di prompt.
 
 ### v1.0.6 (Windows & Linux)
 
@@ -72,7 +84,7 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 
 ### Windows
 
-1. Unduh `NxCode-IDE-Setup-1.0.6.exe`.
+1. Unduh `NxCode-IDE-Setup-1.0.7.exe`.
 2. Jalankan. Karena belum ditandatangani, Windows SmartScreen mungkin muncul —
    pilih **More info** lalu **Run anyway**.
 3. Ikuti wizard: folder instal, shortcut Start Menu / Desktop, lalu selesai.
@@ -83,8 +95,8 @@ Installer bersifat per-user (tidak butuh admin) dan memperbarui instalasi lama
 ### Linux
 
 ```bash
-tar -xzf NxCode-IDE-1.0.0-linux-x64.tar.gz
-cd NxCode-IDE-1.0.0-linux-x64
+tar -xzf NxCode-IDE-1.0.6-linux-x64.tar.gz
+cd NxCode-IDE-1.0.6-linux-x64
 ./editor
 ```
 
@@ -109,7 +121,7 @@ dari sistem. Untuk mesin tanpa Qt, perlu bundel Qt (AppImage/linuxdeployqt).
 
 ```powershell
 # Windows
-Get-FileHash .\NxCode-IDE-Setup-1.0.6.exe -Algorithm SHA256
+Get-FileHash .\NxCode-IDE-Setup-1.0.7.exe -Algorithm SHA256
 ```
 
 ```bash
