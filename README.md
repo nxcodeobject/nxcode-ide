@@ -7,6 +7,7 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 
 | Berkas | Sistem | Ukuran | SHA-256 |
 | --- | --- | --- | --- |
+| `NxCode-IDE-Setup-1.0.8.exe` | Windows 10/11 (64-bit) | ± 74 MB | `CBCCAB270943B1682C094D3B9BB36EF33148F56C2D9BA4129BE5D3596B61533D` |
 | `NxCode-IDE-Setup-1.0.7.exe` | Windows 10/11 (64-bit) | ± 74 MB | `05C534F960965D495DB86FAF67FBD7EB6C7E8125C622A229A2B8ADADB0DD2FA0` |
 | `NxCode-IDE-Setup-1.0.6.exe` | Windows 10/11 (64-bit) | ± 74 MB | `E54947295ACB722E81A6CF3F42D4A0DCCE172446CD3A72753DDAE2BD4A9A7B18` |
 | `NxCode-IDE-1.0.6-linux-x64.tar.gz` | Linux (x64) | ± 14 MB | `45102B592E453EA6207EE596A79AA88122057EF167E87EDAF36025790BDB6356` |
@@ -16,6 +17,13 @@ Berkas di sini yang diunggah ke halaman rilis GitHub dan ditautkan dari website.
 | `NxCode-IDE-Setup-1.0.3.exe` | Windows 10/11 (64-bit) | ± 54 MB | `B53EF598EE46D81A9896C327DDAB94DF4C544C814F842332F621FC73AC157BB0` |
 | `NxCode-IDE-Setup-1.0.2.exe` | Windows 10/11 (64-bit) | ± 54 MB | `524764F3D48697BA99DC4EAC7CC576509E50C1D8943AFCF8B434C305AE33577C` |
 | `NxCode-IDE-Setup-1.0.0.exe` | Windows 10/11 (64-bit) | ± 54 MB | `8DA7F5CEE66378A96A036DB974E26AB62B2EA7E7ED950506915CC405353B465F` |
+
+### v1.0.8 (Windows)
+
+- **Menulis**: multi-kursor (`Ctrl+klik`, `Ctrl+Alt+↑/↓`, `Ctrl+Shift+L`).
+  `Ctrl+Shift` + tahan tombol kiri + geser membuat seleksi blok. `Esc` menyisakan satu kursor.
+- **Explorer**: `Ctrl+klik` menandai beberapa file. Salin, hapus, dan tarik ke terminal memakai semua yang ditandai.
+- **Terminal**: panel kanan dan bawah tetap responsif saat agen AI menulis banyak berkas. Log dibatasi 5000 baris.
 
 ### v1.0.7 (Windows)
 
